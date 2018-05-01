@@ -1,0 +1,116 @@
+Module                  Size  Used by
+uas                    24576  0 
+usb_storage            69632  1 uas
+ipheth                 16384  0 
+nf_conntrack_netlink    40960  0 
+nfnetlink              16384  2 nf_conntrack_netlink
+xfrm_user              32768  1 
+xfrm_algo              16384  1 xfrm_user
+xt_addrtype            16384  2 
+xt_conntrack           16384  2 
+br_netfilter           24576  0 
+binfmt_misc            20480  1 
+veth                   16384  0 
+ebtable_filter         16384  0 
+ebtables               32768  1 ebtable_filter
+aufs                  229376  0 
+ip6t_MASQUERADE        16384  1 
+nf_nat_masquerade_ipv6    16384  1 ip6t_MASQUERADE
+ip6table_nat           16384  1 
+nf_conntrack_ipv6      20480  1 
+nf_defrag_ipv6         36864  1 nf_conntrack_ipv6
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_filter        16384  1 
+ip6_tables             28672  2 ip6table_filter,ip6table_nat
+xt_comment             16384  19 
+xt_CHECKSUM            16384  2 
+iptable_mangle         16384  1 
+ipt_MASQUERADE         16384  4 
+nf_nat_masquerade_ipv4    16384  1 ipt_MASQUERADE
+iptable_nat            16384  1 
+nf_conntrack_ipv4      16384  7 
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 28672  4 nf_nat_masquerade_ipv6,nf_nat_ipv6,nf_nat_masquerade_ipv4,nf_nat_ipv4
+nf_conntrack          131072  10 nf_conntrack_ipv6,nf_conntrack_ipv4,ipt_MASQUERADE,nf_nat_masquerade_ipv6,nf_conntrack_netlink,nf_nat_ipv6,nf_nat_masquerade_ipv4,xt_conntrack,nf_nat_ipv4,nf_nat
+libcrc32c              16384  2 nf_conntrack,nf_nat
+xt_tcpudp              16384  18 
+bridge                143360  1 br_netfilter
+stp                    16384  1 bridge
+iptable_filter         16384  1 
+llc                    16384  2 bridge,stp
+ccm                    20480  6 
+nls_iso8859_1          16384  1 
+zfs                  2711552  6 
+zunicode              331776  1 zfs
+zavl                   16384  1 zfs
+zcommon                45056  1 zfs
+znvpair                77824  2 zcommon,zfs
+spl                    98304  3 znvpair,zcommon,zfs
+arc4                   16384  2 
+intel_rapl             20480  0 
+snd_hda_codec_hdmi     49152  1 
+x86_pkg_temp_thermal    16384  0 
+intel_powerclamp       16384  0 
+snd_hda_codec_realtek    98304  1 
+snd_hda_codec_generic    73728  1 snd_hda_codec_realtek
+coretemp               16384  0 
+kvm_intel             200704  0 
+kvm                   593920  1 kvm_intel
+irqbypass              16384  1 kvm
+ath9k_htc              77824  0 
+ath9k_common           36864  1 ath9k_htc
+snd_hda_intel          40960  8 
+crct10dif_pclmul       16384  0 
+snd_hda_codec         126976  4 snd_hda_intel,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+crc32_pclmul           16384  0 
+ath9k_hw              471040  2 ath9k_htc,ath9k_common
+input_leds             16384  0 
+snd_hda_core           81920  5 snd_hda_intel,snd_hda_codec,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+joydev                 20480  0 
+ghash_clmulni_intel    16384  0 
+ath                    28672  3 ath9k_htc,ath9k_hw,ath9k_common
+snd_hwdep              20480  1 snd_hda_codec
+mac80211              782336  1 ath9k_htc
+cryptd                 24576  1 ghash_clmulni_intel
+snd_pcm                98304  5 snd_hda_intel,snd_hda_codec,snd_hda_core,snd_hda_codec_hdmi
+cfg80211              614400  4 ath9k_htc,mac80211,ath,ath9k_common
+intel_cstate           20480  0 
+intel_rapl_perf        16384  0 
+snd_seq_midi           16384  0 
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            32768  1 snd_seq_midi
+serio_raw              16384  0 
+snd_seq                65536  2 snd_seq_midi_event,snd_seq_midi
+snd_seq_device         16384  3 snd_seq,snd_rawmidi,snd_seq_midi
+snd_timer              32768  2 snd_seq,snd_pcm
+lpc_ich                24576  0 
+snd                    81920  26 snd_hda_intel,snd_hwdep,snd_seq,snd_hda_codec,snd_timer,snd_rawmidi,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_realtek,snd_pcm
+soundcore              16384  1 snd
+mei_me                 40960  0 
+mei                   102400  1 mei_me
+shpchp                 36864  0 
+mac_hid                16384  0 
+parport_pc             32768  0 
+ppdev                  20480  0 
+lp                     20480  0 
+parport                49152  3 lp,parport_pc,ppdev
+ip_tables              24576  3 iptable_mangle,iptable_filter,iptable_nat
+x_tables               40960  13 xt_comment,iptable_mangle,ip_tables,ebtables,iptable_filter,xt_tcpudp,ipt_MASQUERADE,xt_CHECKSUM,ip6table_filter,xt_addrtype,ip6t_MASQUERADE,xt_conntrack,ip6_tables
+autofs4                40960  2 
+hid_generic            16384  0 
+psmouse               147456  0 
+usbhid                 49152  0 
+r8169                  86016  0 
+hid                   118784  3 hid_generic,usbhid
+mii                    16384  1 r8169
+i915                 1822720  26 
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        167936  1 i915
+video                  40960  1 i915
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+pata_acpi              16384  0 
+drm                   360448  25 i915,drm_kms_helper
